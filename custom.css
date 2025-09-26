@@ -1,6 +1,33 @@
-:root {
-  --button-x: "Circle";
-  --button-a: "Cross";
-  --button-b: "Square";
-  --button-y: "Triangle";
+/* Custom CSS for GamepadViewer.com - X to Circle Remap for PS4 Skin */
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+/* Target the PS4 controller skin */
+.controller.ds4 {
+    /* Ensure the base controller skin is correct */
+}
+
+/* Style for the face buttons container */
+.ds4 .facebuttons {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    /* Adjust top and left values to match the PS4 skin's button positions */
+    top: 150px;
+    left: 450px;
+}
+
+/* Target the specific X button and change its image to a circle */
+.ds4 .button.x {
+    background: url('https://your-image-hosting.com/button-spritesheet.png'); /* Replace with your hosted image URL */
+    background-position: -118px 0; /* Adjust to show circle in unpressed state */
+    width: 58px;
+    height: 58px;
+}
+
+.ds4 .button.x.pressed {
+    background-position: -118px -59px; /* Adjust to show circle in pressed state */
 }
