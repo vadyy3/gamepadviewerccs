@@ -1,33 +1,14 @@
-/* Custom CSS for GamepadViewer.com - X to Circle Remap for PS4 Skin */
-body {
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0px auto;
-    overflow: hidden;
+/* Make Circle light up when X is pressed */
+#gamepad-1-button-2.active ~ #gamepad-1-button-1 {
+  background: rgba(255, 0, 0, 0.7) !important;
 }
 
-/* Target the PS4 controller skin */
-.controller.ds4 {
-    /* Ensure the base controller skin is correct */
+/* Make X light up when Square is pressed */
+#gamepad-1-button-3.active ~ #gamepad-1-button-2 {
+  background: rgba(0, 0, 255, 0.7) !important;
 }
 
-/* Style for the face buttons container */
-.ds4 .facebuttons {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    /* Adjust top and left values to match the PS4 skin's button positions */
-    top: 150px;
-    left: 450px;
-}
-
-/* Target the specific X button and change its image to a circle */
-.ds4 .button.x {
-    background: url('https://your-image-hosting.com/button-spritesheet.png'); /* Replace with your hosted image URL */
-    background-position: -118px 0; /* Adjust to show circle in unpressed state */
-    width: 58px;
-    height: 58px;
-}
-
-.ds4 .button.x.pressed {
-    background-position: -118px -59px; /* Adjust to show circle in pressed state */
+/* Make Square light up when R3 is pressed */
+#gamepad-1-button-10.active ~ #gamepad-1-button-3 {
+  background: rgba(255, 128, 0, 0.7) !important;
 }
